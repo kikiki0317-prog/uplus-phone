@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LG유플러스 스마트폰 기기변경/번호이동 특가</title>
+    
+    <!-- 초보자용 Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 유플러스 마젠타 컬러 설정 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        uplus: {
+                            DEFAULT: '#E6007E',
+                            dark: '#c5006d',
+                            light: '#fce4ec'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; background-color: #f8f9fa; }
+        
+        /* 폰 이미지 임시 회색 박스 효과 */
+        .phone-mockup {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- 1. 상단 네비게이션바 (공식 홈페이지 느낌) -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <!-- 로고 -->
+                <div class="text-2xl font-black text-uplus tracking-tighter cursor-pointer">LG U+</div>
+                <!-- 메뉴 -->
+                <nav class="hidden md:flex gap-6 text-sm font-bold text-gray-600">
+                    <a href="#" class="text-uplus border-b-2 border-uplus pb-5 pt-5">모바일 기기</a>
+                    <a href="#" class="hover:text-black pt-5 pb-5 transition">요금제</a>
+                    <a href="#" class="hover:text-black pt-5 pb-5 transition">혜택/이벤트</a>
+                </nav>
+            </div>
+            <div>
+                <!-- 나중에 카카오톡 상담 링크 등을 넣을 수 있는 버튼 -->
+                <a href="#" class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-black transition">빠른 가입상담</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. 메인 배너 (히어로 섹션) -->
+    <section class="bg-uplus-light py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-8 md:mb-0">
+                <span class="bg-uplus text-white px-3 py-1 rounded-full text-xs font-bold mb-4 inline-block">온라인 단독 특가</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                    최신 스마트폰,<br>가장 합리적인 선택
+                </h1>
+                <p class="text-gray-600 text-lg mb-6">기기값 부담 제로! 최대 지원금 받고 지금 바로 개통하세요.</p>
+            </div>
+            <!-- 배너 우측 꾸밈 영역 -->
+            <div class="w-64 h-64 bg-white rounded-full shadow-2xl flex items-center justify-center border-8 border-pink-100">
+                <div class="text-center">
+                    <p class="text-uplus font-black text-3xl">최대 50만원</p>
+                    <p class="font-bold text-gray-500">할인 지원금</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 핸드폰 진열장 (가장 중요한 부분!) -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        
+        <!-- 카테고리 필터 (디자인용) -->
+        <div class="flex gap-4 mb-8 border-b pb-4 overflow-x-auto">
+            <button class="font-bold text-uplus border-b-2 border-uplus pb-2 whitespace-nowrap">전체보기</button>
+            <button class="font-bold text-gray-400 hover:text-gray-800 pb-2 whitespace-nowrap transition">삼성 갤럭시</button>
+            <button class="font-bold text-gray-400 hover:text-gray-800 pb-2 whitespace-nowrap transition">애플 아이폰</button>
+        </div>
+
+        <!-- 상품 그리드 (가로로 1개~4개씩 배열됨) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- 📱 1. 갤럭시 S26 -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-uplus text-white text-[10px] font-bold px-2 py-1 rounded">BEST</span>
+                    <span class="bg-gray-800 text-white text-[10px] font-bold px-2 py-1 rounded">신규출시</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&q=80&w=400" alt="갤럭시 S26" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">삼성전자</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">갤럭시 S26</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 1,155,000원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <!-- 여기서 가격의 숫자를 수정하세요! -->
+                            <span class="text-2xl font-black text-uplus tracking-tighter">45,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 2. 갤럭시 S26+ -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded">인기</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1598327105666-5b89351cb31b?auto=format&fit=crop&q=80&w=400" alt="갤럭시 S26+" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">삼성전자</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">갤럭시 S26+</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 1,353,000원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">55,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 3. 갤럭시 S26 Ultra -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-gray-800 text-white text-[10px] font-bold px-2 py-1 rounded">프리미엄</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?auto=format&fit=crop&q=80&w=400" alt="갤럭시 S26 Ultra" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">삼성전자</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">갤럭시 S26 Ultra</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 1,698,400원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">65,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 4. 갤럭시 Buddy4 -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-uplus text-white text-[10px] font-bold px-2 py-1 rounded">기기값 0원</span>
+                    <span class="bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded">가성비</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1580910051074-3eb694886505?auto=format&fit=crop&q=80&w=400" alt="갤럭시 Buddy4" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">삼성전자</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">갤럭시 Buddy4</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 399,300원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월 요금만</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">33,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 5. iPhone 17 -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded">인기</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?auto=format&fit=crop&q=80&w=400" alt="iPhone 17" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">Apple</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">iPhone 17</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 1,250,000원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">52,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 6. iPhone 17 Pro -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-gray-800 text-white text-[10px] font-bold px-2 py-1 rounded">프리미엄</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1605236453806-6ff36851218e?auto=format&fit=crop&q=80&w=400" alt="iPhone 17 Pro" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">Apple</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">iPhone 17 Pro</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 1,550,000원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">68,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 7. iPhone 17e -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-uplus text-white text-[10px] font-bold px-2 py-1 rounded">특가</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&q=80&w=400" alt="iPhone 17e" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">Apple</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">iPhone 17e</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 850,000원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">35,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 8. 갤럭시 Z Flip7 -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-pink-500 text-white text-[10px] font-bold px-2 py-1 rounded">트렌드</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1603792907191-89e55f70099a?auto=format&fit=crop&q=80&w=400" alt="갤럭시 Z Flip7" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">삼성전자</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">갤럭시 Z Flip7</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 1,399,200원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">42,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 9. 갤럭시 Z Fold7 -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-gray-800 text-white text-[10px] font-bold px-2 py-1 rounded">최고스펙</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1585060544812-6b45742d762f?auto=format&fit=crop&q=80&w=400" alt="갤럭시 Z Fold7" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">삼성전자</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">갤럭시 Z Fold7</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 2,097,700원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">85,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원~</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 📱 10. U+키즈폰 무너에디션2 -->
+            <div class="bg-white rounded-2xl p-6 border hover:border-uplus hover:shadow-xl transition group cursor-pointer relative">
+                <div class="absolute top-6 left-6 z-10 flex gap-1">
+                    <span class="bg-yellow-400 text-gray-900 text-[10px] font-bold px-2 py-1 rounded">우리아이 첫폰</span>
+                    <span class="bg-uplus text-white text-[10px] font-bold px-2 py-1 rounded">기기값 0원</span>
+                </div>
+                <div class="w-full h-56 bg-gray-50 rounded-xl mt-6 relative overflow-hidden group-hover:-translate-y-2 transition duration-300 phone-mockup">
+                    <img src="https://images.unsplash.com/photo-1541560052-5e137f229371?auto=format&fit=crop&q=80&w=400" alt="U+키즈폰 무너에디션2" class="w-full h-full object-cover">
+                </div>
+                <div class="mt-6">
+                    <p class="text-sm text-gray-500 mb-1">LG U+ 전용</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 line-clamp-1">U+키즈폰 무너에디션2</h3>
+                    <div class="mb-4">
+                        <p class="text-sm text-gray-400 line-through">출고가 297,000원</p>
+                        <div class="flex items-end gap-1">
+                            <span class="text-sm text-gray-600 font-bold">월 요금만</span>
+                            <span class="text-2xl font-black text-uplus tracking-tighter">22,000</span>
+                            <span class="text-sm text-gray-600 font-bold">원</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- 상품 그리드 끝 -->
+    </section>
+
+    <!-- 4. 하단 안내 및 푸터 -->
+    <footer class="bg-gray-900 text-gray-400 py-12 px-4 border-t-4 border-uplus mt-10">
+        <div class="max-w-7xl mx-auto text-sm">
+            <h4 class="text-white font-bold text-lg mb-4">가입상담 및 문의 : 010-XXXX-XXXX</h4>
+            <p class="mb-2">위 요금은 5G 프리미어 요금제 (월 85,000원) 및 공시지원금 적용 기준 예시이며, 요금제에 따라 변동될 수 있습니다.</p>
+            <p>※ 본 페이지는 인터넷 가입 유도 및 핸드폰 판매를 위한 안내 페이지입니다.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
